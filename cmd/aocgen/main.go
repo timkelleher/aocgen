@@ -205,7 +205,7 @@ func runYear(year int) {
 }
 
 func runDay(year, day int) {
-	aoc.Run(aoc.NewPuzzle(year, day), aoc.Input(year, day))
+	aoc.Run(year, day, aoc.NewPuzzle(year, day), aoc.Input(year, day))
 }
 
 func main() {

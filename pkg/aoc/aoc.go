@@ -47,11 +47,11 @@ func NewPuzzle(year, day int) Puzzle {
 	return puzzle
 }
 
-func Run(p Puzzle, input []string) {
+func Run(year, day int, p Puzzle, input []string) {
 	if p == nil {
 		logrus.Fatal("Failed to run empty puzzle")
 	}
 
-	logrus.Infof("Part A Result: %v", p.PartA(input))
-	logrus.Infof("Part B Result: %v", p.PartB(input))
+	logrus.Infof("%d Day %d, Part A Result: %v", year, day, p.PartA(input))
+	logrus.Infof("%d Day %d, Part B Result: %v", year, day, p.PartB(input))
 }
