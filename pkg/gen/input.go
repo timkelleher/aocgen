@@ -28,6 +28,8 @@ func WebInput(year, day int) []byte {
 	}
 	req.AddCookie(session)
 
+	req.Header.Set("User-Agent", "github.com/timkelleher/aocgen by tim@timkelleher.com")
+
 	resp, err := c.Do(req)
 	if err != nil {
 		logrus.Errorf("Error: %s", err)
