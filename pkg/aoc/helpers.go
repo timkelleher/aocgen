@@ -2,7 +2,6 @@ package aoc
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
 	"strconv"
 	"strings"
@@ -42,7 +41,7 @@ func TestInput(year, day int) []string {
 }
 
 func readFile(fileName string) []string {
-	b, err := ioutil.ReadFile(fileName)
+	b, err := os.ReadFile(fileName)
 	if err != nil {
 		logrus.Fatal(err)
 	}
